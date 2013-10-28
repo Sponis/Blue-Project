@@ -137,7 +137,77 @@ input[type="image"] {
     color: #7a8090;
 }
 
+#photo img{
+    margin: 25px 80px 0px 70px;
+    box-shadow: 0 25px 10px #000;
+}
 
+#box {
+    width: 950px;
+    height: 400px;
+    margin: 20px 80px 0px 70px;
+    background-color: #232631;
+}
+
+.mainbox {
+    float: left;
+    width: 290px;
+    height: 360px;
+    margin: 20px 0px 20px 20px;
+    background-color: #1d202a;
+}
+
+#boxC {
+    float: left;
+    width: 290px;
+    height: 275px;
+    margin: 20px 0px 0px 20px;
+    background-color: #1d202a;
+}
+
+#boxD {
+    float: left;
+    width: 290px;
+    height: 70px;
+    margin: 15px 0px 20px 20px;
+    background-color: #1d202a;
+}
+
+.boxhead { 
+    width: 290px;
+    height: 45px;
+    margin-bottom: 20px;
+    background: url("http://i.imgur.com/cLloIbM.jpg");
+}
+
+.boxhead h3 {
+    float: right;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    line-height: 46px;
+    text-align: left;
+    margin: 0;
+    width: 244px;
+}
+
+.boxpic {  
+    float: left;
+    width: 250px;
+    height: 90px;
+    margin: 0px 20px;
+}
+
+.subhead {
+    float: left;
+    font-family: Arial;
+    font-size: 19px;
+    line-height: 19px;
+    color: #fff;
+    margin: 20px 20px 0px 20px;
+    width: 250px;
+}
 
 /*end of content*/
 /*info*/
