@@ -156,22 +156,22 @@ nav a:hover {
 
 #box {
     width: 950px;
-    height: 405px;
+    height: 410px;
     margin-top: 40px;
     background-color: #232631;
 }
 
 .innerbox {
-    height: 325px;
-    width: 290px;
-    padding: 0px 20px;
-    margin-top: 45px;
+    height: 280px;
+    width: 250px;
+    padding: 20px;
+    overflow: hidden;
 }
 
 .mainbox {
     float: left;
     width: 290px;
-    height: 365px;
+    height: 370px;
     margin: 20px 0px 20px 20px;
     background-color: #1d202a;
 }
@@ -179,15 +179,16 @@ nav a:hover {
 #boxC {
     float: left;
     width: 290px;
-    height: 275px;
-    margin: 20px;
+    height: 280px;
+    margin: 20px 20px 10px 20px;
     background-color: #1d202a;
+    overflow: hidden;
 }
 
 #boxD {
     float: left;
     width: 290px;
-    height: 70px;
+    height: 80px;
     margin-left: 20px;
     background-color: #1d202a;
 }
@@ -197,7 +198,7 @@ nav a:hover {
     float: left;
     width: 290px;
     height: 45px;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     background: url("http://i.imgur.com/cLloIbM.jpg");
 }
 
@@ -289,9 +290,9 @@ nav a:hover {
     margin-left: 10px;
 }
 
-/*.innerbox2 {
+.innerbox2 {
     width: 235px;
-    height: 230px;
+    height: 235px;
     padding: 0px 25px;
     margin-top: 45px;
 }
@@ -299,7 +300,7 @@ nav a:hover {
 #content .innerbox2 ul{
     list-style: none;
     width: 235px;
-    height: 230px;
+    height: 235px;
     padding: 0;
     margin: 0;
 }
@@ -307,29 +308,35 @@ nav a:hover {
 #content .innerbox2 ul li {
     display: block;
     width: 235px;
-    height: 35px;
-    margin-top: 20px;
+    height: 40px;
+    padding-top: 15px;
 }
 
-#phonepic {
+.phonepic {
     display: inline-block;
     width: 40px;   
-    height: 30px;
+    height: 40px;
 }
 
-#phoneinfo {
+.phoneinfo {
     display: inline-block;
-    width: 190px;
-    height: 30px;
+    width: 180px;
+    height: 40px;
 }
 
 .phonehead {
     display: block;
+    width:180px;
 }
 
 .phonetext {
     display: block;
-}*/
+    width: 180px;
+}
+
+.innerbox2 ul li h4 {
+    margin: 0;
+}
 /*end of content*/
 /*info*/
 #info {
