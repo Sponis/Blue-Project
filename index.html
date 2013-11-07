@@ -15,7 +15,11 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/lightbox.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/vendor/lightbox-2.6.min.js"></script>
+    <script src="js/vendor/twitterFetcher_v10_min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Trykker|Share+Tech' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -152,17 +156,35 @@
         </div>
     </div>
     <div id="boxD">
-        <p>A</p>
-    </div>
+            <ul>
+                <li>
+                    <a title="twitter" href="#"><img src='/img/twico.png' alt="twitter icon" width="30" height="30"></a>
+                </li>
+                <li>
+                    <a title="facebook" href="#"><img src='/img/fbico.png' alt="facebook icon" width="30" height="30"></a>
+                </li>
+                <li>
+                    <a title="flickr" href="#"><img src='/img/flico.png' alt="flickr icon" width="30" height="30"></a>
+                </li>
+                <li>
+                    <a title="linkedin" href="#"><img src='/img/liico.png' alt="linkedin icon" width="30" height="30"></a>
+                </li>
+                <li>
+                    <a title="tumblr" href="#"><img src='/img/tuico.png' alt="tumblr icon" width="30" height="30"></a>
+                </li>
+                <li>
+                    <a title="youtube" href="#"><img src='/img/ytico.png' alt="youtube icon" width="30" height="30"></a>
+                </li>
+            </ul>
+        </div>
 
 </div>
 </div>
 </div>
-<!--
 <div id="info">
-    <div class=""></div>
+    <div class="wrapper">
     <div id="about">
-        <p class="head">About Us</p>
+        <h4 class="head">About Us</h4>
         <br>
         <ul>
             <li><a class="listlinks" href="#">Our Company</a></li>
@@ -174,7 +196,7 @@
         </ul>
     </div>
     <div id="Categories">
-        <p class="head">Categories</p>
+        <h4 class="head">Categories</h4>
         <br>
         <ul>
             <li><a class="listlinks" href="#">Trends & Technology</a></li>
@@ -186,25 +208,26 @@
         </ul>
     </div>
     <div id="Gallery">
-        <p class="head">From The Gallery</p>
+        <h4 class="head">From The Gallery</h4>
         <br>
         <table id="photos">
             <tr>
-                <td><img src="img/gall01.jpg" alt="img01"></td>
-                <td><img src="img/gall02.jpg" alt="img02"></td>
-                <td><img src="img/gall03.jpg" alt="img03"></td>
-                <td><img src="img/gall04.jpg" alt="img04"></td>
+                <td><a href="/img/gall01.jpg" data-lightbox="gallery" title="Image 01"><img src="img/gall01.jpg" alt="img01"></a></td>
+                <td><a href="/img/gall02.jpg" data-lightbox="gallery" title="Image 02"><img src="img/gall02.jpg" alt="img02"></a></td>
+                <td><a href="/img/gall03.jpg" data-lightbox="gallery" title="Image 03"><img src="img/gall03.jpg" alt="img03"></a></td>
+                <td><a href="/img/gall04.jpg" data-lightbox="gallery" title="Image 04"><img src="img/gall04.jpg" alt="img04"></a></td>
             </tr>
             <tr>
-                <td><img src="img/gall05.jpg" alt="img05"></td>
-                <td><img src="img/gall06.jpg" alt="img06"></td>
-                <td><img src="img/gall07.jpg" alt="img07"></td>
-                <td><img src="img/gall08.jpg" alt="img08"></td>
+                <td><a href="/img/gall05.jpg" data-lightbox="gallery" title="Image 05"><img src="img/gall05.jpg" alt="img05"></a></td>
+                <td><a href="/img/gall06.jpg" data-lightbox="gallery" title="Image 06"><img src="img/gall06.jpg" alt="img06"></a></td>
+                <td><a href="/img/gall07.jpg" data-lightbox="gallery" title="Image 07"><img src="img/gall07.jpg" alt="img07"></a></td>
+                <td><a href="/img/gall08.jpg" data-lightbox="gallery" title="Image 08"><img src="img/gall08.jpg" alt="img08"></a></td>
             </tr>
         </table>
     </div>
     <div id="twupdates">
-        <p class="head">Twitter Updates</p>
+        <h4 class="head">Twitter Updates</h4>
+        <div id="example1"><script>twitterFetcher.fetch('398379208813985792', 'example1', 1, true);</script></div>
     </div>
 </div>
 </div>
@@ -222,6 +245,5 @@
         </div>
     </div>
 </footer>
-<!--</div>-->
 </body>
 </html>

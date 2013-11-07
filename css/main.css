@@ -1,6 +1,6 @@
 .wrapper {
     width: 950px;
-    height: 1255px;
+    /*height: 1255px;*/
     margin: 0 auto;
     position: relative;
 }
@@ -337,6 +337,18 @@ nav a:hover {
 .innerbox2 ul li h4 {
     margin: 0;
 }
+
+#boxD ul {
+    list-style: none;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    padding-left: 25px;
+}
+
+#boxD li {
+    display: inline-block;
+    padding-right: 8px;
+}
 /*end of content*/
 /*info*/
 #info {
@@ -353,7 +365,6 @@ nav a:hover {
     display: block;
     width: 150px;
     height: 100%;
-    margin-left: 70px;
     float: left;
 }
 
@@ -370,6 +381,7 @@ nav a:hover {
     font-size: 22px;
     color: #8c94ac;
     padding-top: 35px;
+    margin: 0;
 }
 
 .listlinks {
@@ -405,6 +417,33 @@ nav a:hover {
 }
 
 
+#example1 ul {
+    margin-top: 10px;
+}
+
+.user img {
+    float: right;
+}
+
+#example1 a {
+    color: #81d8d0;
+    padding-right: 5px;
+}
+
+
+#info p {
+    color: #fff;
+    font-family: Verdana;
+    font-size: 12px;
+    margin: 10px 0px;
+}
+
+#example1 li {
+    padding: 5px;
+    background-color: #232631;
+    border-radius: 10px;
+
+}
 
 
 /*footer*/
@@ -430,17 +469,15 @@ footer a {
 }
 
 #copyright {
-    width: 40%;
+    width: 50%;
     float:left;
-    margin-left: 70px;
 }
 
 #links {
     display: block;
-    width: 40%;
+    width: 50%;
     float: right;
     text-align: right;
-    margin-right: 80px;
 }
 
 #links ul {
