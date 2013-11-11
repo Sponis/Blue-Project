@@ -1,12 +1,11 @@
+//Fetching latest Tweet//
+
 jQuery(document).ready(function(){
 
-	jQuery('#searchform input[type="text"]').on('click',function(){
-		if (jQuery(this).val('Search Keywords')) {
-			jQuery(this).val('');
-		}
+	twitterFetcher.fetch('398379208813985792', 'example1', 1, true);
 
 		});
-	});
+	
 
 
 

@@ -11,6 +11,11 @@ header {
     height: 150px;
 }
 
+header a:hover {
+    color: #ff5400;
+    background-color: #000;
+}
+
 #tophead {
     width: 100%;
     height: 50px;
@@ -149,6 +154,11 @@ nav a:hover {
     background: url('/img/slc_content.png');
 }
 
+#content a:hover {
+    color: #ff5400;
+    background-color: #000;
+}
+
 #photo img{
     margin-top: 10px;
     box-shadow: 0 35px 20px #000;
@@ -198,7 +208,6 @@ nav a:hover {
     float: left;
     width: 290px;
     height: 45px;
-    /*margin-bottom: 20px;*/
     background: url("http://i.imgur.com/cLloIbM.jpg");
 }
 
@@ -338,6 +347,21 @@ nav a:hover {
     margin: 0;
 }
 
+.phoneico {
+    padding-left: 40px;
+    background: url('/img/phone01.png') 0 50% no-repeat; 
+}
+
+.emailico {
+    padding-left: 40px;
+    background: url('/img/email01.png') 0 50% no-repeat;
+}
+
+.skypeico {
+    padding-left: 40px;
+    background: url('/img/skype01.png') 0 50% no-repeat;
+}
+
 #boxD ul {
     list-style: none;
     margin-bottom: 25px;
@@ -359,6 +383,11 @@ nav a:hover {
 
 #info p {
     margin: 0;
+}
+
+#info a:hover {
+    color: #ff5400;
+    background-color: #000;
 }
 
 #about {
@@ -468,6 +497,11 @@ footer a {
     text-decoration: none;
 }
 
+footer a:hover {
+    color: #ff5400;
+    background-color: #000;
+}
+
 #copyright {
     width: 50%;
     float:left;
@@ -486,8 +520,15 @@ footer a {
     padding: 0;
 }
 
-#links li {
+#links ul li {
     display: inline-block;
     line-height: 60px;
 }
+
+.rightborder {
+    border-right: 1px solid #6a7796;
+    margin-left: 4px;
+}
+
+
 /*end of footer*/
