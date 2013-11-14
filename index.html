@@ -24,11 +24,12 @@
     <header>
         <div id="tophead">
             <div class="wrapper">
-                <p id="sub">Subscribe to: 
-                    <a title="Posts" href="#">Posts</a><span class="rightborder"></span>
-                    <a title="Comments" href="#">Comments</a><span class="rightborder"></span>
-                    <a title="Email" href="#">Email</a>
-                </p>
+                <span id="sub">Subscribe to:</span>
+                <ul id="sub_list">
+                    <li><a title="Posts" href="#">Posts</a></li>
+                    <li><a title="Comments" href="#">Comments</a></li>
+                    <li><a class="noborder" title="Email" href="#">Email</a></li>
+                </ul>
                 <div id="searchform">
                     <form name="search" action ="" method="">
                         <input type="text" name="searchvalue" placeholder="  Search Keywords">
@@ -63,8 +64,11 @@
     <!--- END OF HEADER-->
     <div id="content"> 
         <div class="wrapper">
-            <div id="photo">
+            <div id="slideshow">
                 <img src="img/main.jpg" alt="mainpic">
+                <img src="img/main2.jpg" alt="alt1pic">
+                <img src="img/main3.jpg" alt="alt2pic">
+                <img src="img/main4.jpg" alt="alt3pic">
             </div>
             <div id="box">
                 <div id="boxA" class="mainbox">
@@ -75,9 +79,7 @@
                     <div class="innerbox">
                         <img class="boxpic" src="img/boxApic.jpg" alt="picA">
                         <h4 class="subhead">All About iPadMasters</h4>    <p id="boxAtext" class="textbox">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-                        <div id="buttonA">
-                            <a class="buttontext" title="Learn More" href="#">Learn More</a>
-                        </div>
+                        <a id="buttonA" class="buttontext" title="Learn More" href="#">Learn More</a>
                     </div>
                 </div>
                 <div id="boxB" class="mainbox">
@@ -92,10 +94,8 @@
                        <span class="textbox secsub">Posted in <a title="Web Design" href="#">Web Design</a> on April 13,2010</span>
                    </h4>
                    <p id="boxBtext" class="textbox">Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-                   <div id="buttonB">
-                    <a class="buttontext" title="Comments" href="#">23 Comments</a>
-                </div>
-                <div id="buttonC"><a class="buttontext" title="Read More" href="#">Read More</a></div>
+                    <a id="buttonB" class="buttontext" title="Comments" href="#">23 Comments</a>
+                    <a id="buttonC" class="buttontext" title="Read More" href="#">Read More</a>
             </div>
         </div>
         <div id="boxC">
@@ -221,11 +221,11 @@
         <p id="copyright">© 2010 Copyright iPadMasters Theme. All Rights Reserved.</p>
         <div id="links">
             <ul>
-                <li><a href="#">Log In</a></li><span class="rightborder"></span>
-                <li><a href="#">Privacy Policy</a></li><span class="rightborder"></span>
-                <li><a href="#">Terms and Conditions</a></li><span class="rightborder"></span>
-                <li><a href="#">Contact Us</a></li><span class="rightborder"></span>
-                <li><a href="#">Back to Top</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a class="noborder" href="#">Back to Top</a></li>
             </ul>
         </div>
     </div>
@@ -233,6 +233,7 @@
 <script src="js/vendor/jquery-1.10.2.min.js"></script>
 <script src="js/vendor/lightbox-2.6.min.js"></script>
 <script src="js/vendor/twitterFetcher_v10_min.js"></script>
+<script src="js/vendor/jquery.cycle.all.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

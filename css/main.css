@@ -1,6 +1,5 @@
 .wrapper {
     width: 950px;
-    /*height: 1255px;*/
     margin: 0 auto;
     position: relative;
 }
@@ -10,12 +9,7 @@ header {
     width:100%;
     height: 150px;
 }
-
-header a:hover {
-    color: #ff5400;
-    background-color: #000;
-}
-
+ 
 #tophead {
     width: 100%;
     height: 50px;
@@ -24,7 +18,6 @@ header a:hover {
 
 #sub {
     float: left;
-    width: 50%;
     color: #485766;
     font-family: Verdana;
     font-size: 11px;
@@ -32,10 +25,36 @@ header a:hover {
     margin: 0;
 }
 
-#sub a {
+#sub_list {
+    float: left;
+    padding: 14px 0px 0px 5px;
+    margin: 0;
+}
+    
+#sub_list li{
+    list-style: none;
+    display: inline-block;
+}
+
+#sub_list a {
+    display: block;
     color: #6a87a3;
     text-decoration: none;
+    font-family: Verdana;
+    font-size: 11px;
+    border-right: 1px solid #6a87a3;
+    padding-right: 5px;
 }
+
+#sub_list .noborder {
+    border: none;
+}
+
+#sub_list a:hover {
+    color: #ff5400;
+}
+
+
 
 #searchform {
     position: relative;
@@ -154,12 +173,11 @@ nav a:hover {
     background: url('/img/slc_content.png');
 }
 
-#content a:hover {
-    color: #ff5400;
-    background-color: #000;
+#slideshow {
+    height: 340px;
+    width: 950px;
 }
-
-#photo img{
+#slideshow img{
     margin-top: 10px;
     box-shadow: 0 35px 20px #000;
 }
@@ -171,11 +189,17 @@ nav a:hover {
     background-color: #232631;
 }
 
+#box a:hover {
+    color: #ff5400;
+    background-color: #000;
+}
+
 .innerbox {
     height: 280px;
     width: 250px;
     padding: 20px;
-    overflow: hidden;
+    float: left;
+    /*overflow: hidden;*/
 }
 
 .mainbox {
@@ -249,15 +273,15 @@ nav a:hover {
 }
 
 #buttonA {
-    width: 90px;
+    display: inline-block;
     height: 40px;
+    line-height: 40px;
     background-color: #11719f;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .buttontext  {
-    line-height: 40px;
-    padding: 12px;
+    padding: 0 12px;
     text-decoration: none;
     font-family: Arial;
     font-weight: bold;
@@ -285,16 +309,16 @@ nav a:hover {
 
 #buttonB {
     display: inline-block;
-    width: 105px;
     height: 40px;
+    line-height: 40px;
     background-color: #11719f;
     margin-top: 10px;
 }
 
 #buttonC {
     display: inline-block;
-    width: 85px;
     height: 40px;
+    line-height: 40px;
     background-color: #11719f;
     margin-left: 10px;
 }
@@ -387,7 +411,6 @@ nav a:hover {
 
 #info a:hover {
     color: #ff5400;
-    background-color: #000;
 }
 
 #about {
@@ -495,11 +518,16 @@ footer a {
     font-size: 11px;
     color: #6a7796;
     text-decoration: none;
+    border-right: 1px solid #6a87a3;
+    padding-right: 5px;
+}
+
+footer .noborder {
+    border: none;
 }
 
 footer a:hover {
     color: #ff5400;
-    background-color: #000;
 }
 
 #copyright {
@@ -525,10 +553,6 @@ footer a:hover {
     line-height: 60px;
 }
 
-.rightborder {
-    border-right: 1px solid #6a7796;
-    margin-left: 4px;
-}
 
 
 /*end of footer*/
