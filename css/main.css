@@ -91,8 +91,38 @@ input[type="image"] {
 }
 
 #social a {
+    display: block;
+    width: 16px;
+    height: 16px;
     padding: 2px;
 }
+
+#social ul {
+    margin: 0;
+    padding: 0;
+}
+
+#social .social_icons li {
+    list-style: none;
+    display: inline-block;
+}
+
+.rss {
+    
+    background: url('/img/rss.png') no-repeat;
+}
+
+.fb {
+    
+    background: url('/img/fb.png') no-repeat;
+}
+
+.tw {
+    
+    background: url('/img/tw.jpg') no-repeat;
+}
+
+
 
 #bothead {
     width: 100%;
@@ -232,19 +262,30 @@ nav a:hover {
     float: left;
     width: 290px;
     height: 45px;
-    background: url("http://i.imgur.com/cLloIbM.jpg");
+    background: url('/img/slc_boxhead.jpg');
+}
+
+.boxAico {
+    background: url('/img/boxA_ico.png') no-repeat;
+}
+
+.boxBico {
+    background: url('/img/boxB_ico.png') no-repeat;
+}
+
+.boxCico {
+    background: url('/img/boxC_ico.png') no-repeat;
 }
 
 .boxhead h3 {
-    float: right;
     font-family: Arial;
     font-weight: bold;
     font-size: 20px;
     color: #fff;
     line-height: 46px;
-    text-align: left;
     margin: 0;
-    width: 244px;
+    width: 290px;
+    padding-left: 50px;
 }
 
 .boxpic {  
@@ -386,6 +427,12 @@ nav a:hover {
     background: url('/img/skype01.png') 0 50% no-repeat;
 }
 
+#boxD a {
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+
 #boxD ul {
     list-style: none;
     margin-bottom: 25px;
@@ -397,6 +444,32 @@ nav a:hover {
     display: inline-block;
     padding-right: 8px;
 }
+
+.twitter_icon {
+    background: url('/img/twico.png');
+}
+
+.facebook_icon {
+    background: url('/img/fbico.png');
+}
+
+.flickr_icon {
+    background: url('/img/flico.png');
+}
+
+.linkedin_icon {
+    background: url('/img/liico.png');
+}
+
+.tumblr_icon {
+    background: url('/img/tuico.png');
+}
+
+.youtube_icon {
+    background: url('/img/ytico.png');
+}
+
+
 /*end of content*/
 /*info*/
 #info {
