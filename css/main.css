@@ -77,10 +77,18 @@ input[type="text"] {
     border: 2px solid #292d30;
 }
 
-input[type="image"] {
+input[type="Submit"] {
     position: absolute;
-    left: 175px;
-    top: 5px;
+    left: 170px;
+    top: 0px;
+}
+
+.magnglass {
+    display: block;
+    height: 24px;
+    width: 24px;
+    border: none;
+    background: url(/img/magnglass.png) no-repeat;
 }
 
 #social {
@@ -208,14 +216,76 @@ nav a:hover {
     width: 950px;
 }
 #slideshow img{
-    margin-top: 10px;
-    box-shadow: 0 35px 20px #000;
+    /*box-shadow: 0 35px 20px #000;*/
+}
+
+#slidenav {
+    display: block;
+    height: 50px;
+    width: 950px;
+}
+
+#previousbutton {
+    display: inline-block;
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin-left: 250px;
+    background: url(/img/prev.png) no-repeat;
+}
+
+#pagenavi {
+    display: inline-block;
+    list-style: none;
+    margin: 0;  
+    padding-left: 75px;
+}
+
+#pagenavi li {
+    display: inline-block;
+    line-height: 50px;
+    border: 1px solid #000;
+    border-radius: 50px;
+}
+
+#pagenavi a {
+    display: block;
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 18px;
+    color: #7a8090;
+    text-align: center;
+    border-radius: 50px;
+}
+
+#pagenavi a:hover {
+    color: #ff5400;
+}
+
+#pagenavi a:focus {
+    outline: none;
+}
+
+#pagenavi .activeSlide a{
+    background-color: #000;
+    color: #fff;
+}
+
+#nextbutton {
+    display: inline-block;
+    float: right;
+    height: 50px;
+    width: 50px;
+    margin-right: 250px;
+    background: url(/img/next.png) no-repeat;
 }
 
 #box {
     width: 950px;
     height: 410px;
-    margin-top: 40px;
     background-color: #232631;
 }
 
@@ -229,7 +299,6 @@ nav a:hover {
     width: 250px;
     padding: 20px;
     float: left;
-    /*overflow: hidden;*/
 }
 
 .mainbox {
@@ -475,7 +544,7 @@ nav a:hover {
 #info {
     width:100%;
     height:225px;
-    background: url("http://i.imgur.com/5gxZeA2.jpg");
+    background: url('/img/slc_info.png');
 }
 
 #info p {
