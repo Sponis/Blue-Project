@@ -64,8 +64,100 @@
         </div>  
     </header>
     <!--- END OF HEADER-->
-    <div id="content"> 
-        
+    <div id="contactform"> 
+        <div class="wrapper">
+            <form class="contactus" name="ContactUs" method="post" action="html_form_send.php">
+                <table id="formtable">
+                <tr>
+                    <td>
+                        <label for="first_name">First Name <span class="redstar">*</span></label>
+                    </td>
+                    <td>
+                        <input type="text" name="first_name" maxlength="50" size="30">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="last_name">Last Name <span class="redstar">*</span></label>
+                    </td>
+                    <td>
+                        <input type="text" name="last_name" maxlength="50" size="30">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email Address <span class="redstar">*</span></label>
+                    </td>
+                    <td>
+                        <input type="text" name="email" maxlength="80" size="30">
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <label for="telephone">Telephone Number</label>
+                    </td>
+                    <td>
+                        <input type="text" name="telephone" maxlength="30" size="30">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="DoB">Date of Birth <span class="redstar">*</span></label>
+                    </td>
+                    <td>
+                        <input type="text" name="DoB" maxlength="30" size="30">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="address">Home Address</label>
+                    </td>
+                    <td>
+                        <input type="text" name="address" maxlength="50" size="30">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="country">Country <span class="redstar">*</span></label>
+                    </td>
+                    <td>
+                        <Select name="country">
+                            <option value="China">CHN</option>
+                            <option value="England">ENG</option>
+                            <option value="France">FRA</option>
+                            <option value="Germany">GER</option>
+                            <option value="Greece">GRE</option>
+                            <option value="Holland">HOL</option>
+                            <option value="Italy">ITA</option>
+                            <option value="Japan">JPN</option>
+                            <option value="USA">USA</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="comments">Comments</label>
+                    </td>
+                    <td>
+                        <textarea name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="terms">I Accept the Terms and Conditions <span class="redstar">*</span></label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="terms" value="terms">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+                </table>
+        </div>
 </div>
 <div id="info">
     <div class="wrapper">

@@ -214,10 +214,7 @@ nav a:hover {
 #slideshow {
     height: 340px;
     width: 950px;
-}
-#slideshow img{
-    /*box-shadow: 0 35px 20px #000;*/
-}
+}   
 
 #slidenav {
     display: block;
@@ -542,9 +539,10 @@ nav a:hover {
 /*end of content*/
 /*info*/
 #info {
+    /*float: left;*/
+    overflow: hidden;
     width:100%;
-    height:225px;
-    background: url('/img/slc_info.png');
+    background: url('/img/slc_info2.png');
 }
 
 #info p {
@@ -636,12 +634,13 @@ nav a:hover {
     padding: 5px;
     background-color: #232631;
     border-radius: 10px;
-
+    margin-bottom: 20px;
 }
 
 
 /*footer*/
 footer {
+    /*float: left;*/
     width: 100%;
     height: 60px;
     line-height: 60px;
@@ -698,3 +697,42 @@ footer a:hover {
 
 
 /*end of footer*/
+/*contactform*/
+
+#contactform {
+    width: 100%;
+    background: url('/img/slc_content.png');
+}
+
+#contactform .contactus {
+    padding: 40px 0px;
+    margin-left: 175px;
+}
+
+#formtable {
+    padding: 20px 175px;
+    width: 600px;
+    font-family: Verdana;
+    font-size: 14px;
+    color: #6a7796;
+}
+
+.redstar {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.submitbutton {
+    display: block;
+    height: 20px;
+    float: left;
+}
+
+#formtable input[type="Submit"] {
+    position: absolute;
+    left: 475px;
+    top: 410px;
+}
+
+
+/*end of contactform*/
