@@ -157,7 +157,9 @@
 						$error_message[] = ['telephone' => 'The Telephone Number you entered does not appear to be valid'];
 						$has_errors = true;
 					}
-					
+
+					if ($has_errors = false) {
+
 					$email_message = "Form details below.\n\n";
 
 					function clean_string($string) {
@@ -179,11 +181,15 @@
 					echo "Send to: $email_to \n";
 					echo "Subject: $email_subject \n";
 					echo $email_message;
-
+					}
 					}
 					else 
+						{
+							var_dump($error_message);
+						}
+					else {
 						var_dump($fields_errors);
-
+						}
 
 
 					//$date_exp = "/^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/";
