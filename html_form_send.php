@@ -83,34 +83,44 @@
 					}
 					
 					$fields_errors = array();
+					$has_errors = false;
 					
 					// validation expected data exists
 					if (!isset($_POST['first_name'])) {
-						$fields_errors = ['first_name' => 'We are sorry, but First Name expected'];
+						$fields_errors[] = ['first_name' => 'We are sorry, but First Name expected'];
+						$has_errors = true;
 					}
 					if (!isset($_POST['last_name'])) {
-						$fields_errors = ['last_name' => 'We are sorry, but Last Name expected'];
+						$fields_errors[] = ['last_name' => 'We are sorry, but Last Name expected'];
+						$has_errors = true;
 					}
 					if (!isset($_POST['email'])) {
 						$fields_errors = ['email' => 'We are sorry, but Email Address expected'];
+						$has_errors = true;
 					}
 					if (!isset($_POST['telephone'])) {
-						$fields_errors = ['telephone' => 'We are sorry, but Telephone Number expected'];
+						$fields_errors[] = ['telephone' => 'We are sorry, but Telephone Number expected'];
+						$has_errors = true;
 					}
 					if (!isset($_POST['DoB'])) {
-						$fields_errors = ['DoB' => 'We are sorry, but Date of Birth expected'];
+						$fields_errors[] = ['DoB' => 'We are sorry, but Date of Birth expected'];
+						$has_errors = true;
 					}
 					if (!isset($_POST['address'])) {
-						$fields_errors = ['address' => 'We are sorry, but Home Address expected'];
+						$fields_errors[] = ['address' => 'We are sorry, but Home Address expected'];
+						$has_errors = true;
 					}
 					if (!isset($_POST['country'])) {
-						$fields_errors = ['country' => 'We are sorry, but Country expected'];
+						$fields_errors[] = ['country' => 'We are sorry, but Country expected'];
+						$has_errors = true;
 					}
 					if (!isset($_POST['comments'])) {
-						$fields_errors = ['comments' => 'We are sorry, but Comments expected'];
+						$fields_errors[] = ['comments' => 'We are sorry, but Comments expected'];
+						$has_errors = true;
 					}
 					if (!isset($_POST['terms'])) {
-						$fields_errors = ['terms' => 'We are sorry, but Terms and Conditions expected'];
+						$fields_errors[] = ['terms' => 'We are sorry, but Terms and Conditions expected'];
+						$has_errors = true;
 					}
 					
 					var_dump($fields_errors);
@@ -118,7 +128,7 @@
 					$first_name = $_POST['first_name']; // required
 					$last_name = $_POST['last_name']; // required
 					$email_from = $_POST['email']; // required
-					$telephone = $_POST['telephone']; // not required
+					$telephone = $_POST['telephone']; // required
 					$DoB = $_POST['DoB']; // required
 					$address = $_POST['address']; // not required
 					$country = $_POST['country']; // required
@@ -126,25 +136,34 @@
 					$terms = $_POST['terms']; // required
 
 
-					$error_message = "";
+					$error_message = array();
 					$email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
 					if (!preg_match($email_exp, $email_from)) {
-						$error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+						$error_message[] = ['email' => 'The Email Address you entered does not appear to be valid.'];
+						$has_errors = true;
 					}
 					$string_exp = "/^[A-Za-z .'-]+$/";
 					if (!preg_match($string_exp, $first_name)) {
-						$error_message .= 'The First Name you entered does not appear to be valid.<br />';
+						$error_message[] = ['first_name' => 'The First Name you entered does not appear to be valid.'];
+						$has_errors = true;
 					}
 					if (!preg_match($string_exp, $last_name)) {
-						$error_message .= 'The Last Name you entered does not appear to be valid.<br />';
+						$error_message[] = ['last_name' => 'The Last Name you entered does not appear to be valid.'];
+						$has_errors = true;
 					}
+					$num_exp = "/^[0-9- ]$/";
+					if (!preg_match($num_exp, $telephone)) {
+						$error_message[] = ['telephone' => 'The Telephone Number you entered does not appear to be valid'];
+						$has_errors = true;
+					}
+
+
+
 					//$date_exp = "/^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/";
 					//if(!preg_match($date_exp,$DoB)) {
 					//$error_message .= 'The Date of Birth you entered does not appear to be valid.<br />';
 					//}  
-					if (strlen($error_message) > 0) {
-						died($error_message);
-					}
+					
 					$email_message = "Form details below.\n\n";
 
 					function clean_string($string) {
