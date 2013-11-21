@@ -89,28 +89,28 @@
 						$fields_error['first_name'] = 'We are sorry, but First Name expected';
 					}
 					if (!isset($_POST['last_name'])) {
-						died('We are sorry, but Last Name expected');
+						$fields_error['last_name'] = ('We are sorry, but Last Name expected');
 					}
 					if (!isset($_POST['email'])) {
-						died('We are sorry, but Email Address expected');
+						$fields_error['email'] = ('We are sorry, but Email Address expected');
 					}
 					if (!isset($_POST['telephone'])) {
-						died('We are sorry, but Telephone Number expected');
+						$fields_error['telephone'] = ('We are sorry, but Telephone Number expected');
 					}
 					if (!isset($_POST['DoB'])) {
-						died('We are sorry, but Date of Birth expected');
+						$fields_error['DoB'] = ('We are sorry, but Date of Birth expected');
 					}
 					if (!isset($_POST['address'])) {
-						died('We are sorry, but Home Address expected');
+						$fields_error['address'] = ('We are sorry, but Home Address expected');
 					}
 					if (!isset($_POST['country'])) {
-						died('We are sorry, but Country expected');
+						$fields_error['country'] = ('We are sorry, but Country expected');
 					}
 					if (!isset($_POST['comments'])) {
-						died('We are sorry, but Comments expected');
+						$fields_error['comments'] = ('We are sorry, but Comments expected');
 					}
 					if (!isset($_POST['terms'])) {
-						died('We are sorry, but Terms and Conditions expected');
+						$fields_error['terms'] = ('We are sorry, but Terms and Conditions expected');
 					}
 					
 					var_dump($fields_errors);
