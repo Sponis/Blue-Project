@@ -67,7 +67,7 @@
 	<div id="contactform"> 
 		<div class="wrapper">
 			<?php
-			if (isset($_POST['email'])) {
+			//if (isset($_POST['email'])) {
 
 
 				$email_to = "sponis@gmail.com";
@@ -149,20 +149,21 @@
 						$has_errors = true;
 					}
 					if ($country == "") {
-						$fields_errors[] = ['country'] => 'The Country you entered does not appear to be valid'];
+						$fields_errors[] = ['country' => 'The Country you entered does not appear to be valid'];
 						$has_errors = true;
 					}
 					}
 
 					if ($has_errors == true) {
-						var_dump($fields_errors);
+						if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 						echo "We are very sorry, but there were error(s) found with the form you submitted. ";
 						echo "These errors appear below.<br /><br />";
 						foreach ($fields_errors as $error)  {
 							$error_msg = implode ($error);
 							echo $error_msg . "<br /><br />";
+							}
 						}
-
+					}
 ?>
 	
 			<div class="wrapper2">
@@ -196,6 +197,7 @@
                     <li>
                         <label class="nochange" for="country">Country <span class="redstar">*</span></label>
                         <Select id="country" name="country">
+                        	<option value="">Country</option>
                             <option value="China">CHN</option>
                             <option value="England">ENG</option>
                             <option value="France">FRA</option>
@@ -256,7 +258,7 @@
 					//}  
 
 
-				}
+			//	}
 				?>
 			</div>
 			<div id="info">
