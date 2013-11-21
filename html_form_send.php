@@ -155,8 +155,8 @@
 						echo "We are very sorry, but there were error(s) found with the form you submitted. ";
 						echo "These errors appear below.<br /><br />";
 						foreach ($fields_errors as $error)  {
-							var_dump($error);
-						echo $error . "<br /><br />";}
+							$error_msg = implode ($error);
+						echo $error_msg . "<br /><br />";}
 						echo "Please go back and fix these errors.<br /><br />";
 					}
 
