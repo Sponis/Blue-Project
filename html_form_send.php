@@ -74,14 +74,6 @@
 
 				$email_subject = "Contact Us Form Submission";
 
-				function died($error) {
-						// your error code can go here
-					echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-					echo "These errors appear below.<br /><br />";
-					echo $error . "<br /><br />";
-					echo "Please go back and fix these errors.<br /><br />";
-				}
-
 				$fields_errors = array();
 				$has_errors = false;
 
@@ -156,9 +148,16 @@
 						$fields_errors[] = ['telephone' => 'The Telephone Number you entered does not appear to be valid'];
 						$has_errors = true;
 					}
-	
+					}
+
 					if ($has_errors == true) {
 						var_dump($fields_errors);
+						echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+						echo "These errors appear below.<br /><br />";
+						foreach ($fields_errors as $error)  {
+							var_dump($error);
+						echo $error . "<br /><br />";}
+						echo "Please go back and fix these errors.<br /><br />";
 					}
 
 					else {
@@ -192,77 +191,77 @@
 					//}  
 
 
-			}
-			?>
-		</div>
-		<div id="info">
-			<div class="wrapper">
-				<div id="about">
-					<h4 class="head">About Us</h4>
-					<br>
-					<ul>
-						<li><a class="listlinks" href="#">Our Company</a></li>
-						<li><a class="listlinks" href="#">Our Blog</a></li>
-						<li><a class="listlinks" href="#">Submit A Site</a></li>
-						<li><a class="listlinks" href="#">Contact Us</a></li>
-						<li><a class="listlinks" href="#">Help & Terms</a></li>
-						<li><a class="listlinks" href="#">Read Our FAQ</a></li>
-					</ul>
-				</div>
-				<div id="Categories">
-					<h4 class="head">Categories</h4>
-					<br>
-					<ul>
-						<li><a class="listlinks" href="#">Trends & Technology</a></li>
-						<li><a class="listlinks" href="#">Desigh Companies</a></li>
-						<li><a class="listlinks" href="#">Design Freelancers</a></li>
-						<li><a class="listlinks" href="#">Web Portfolios</a></li>
-						<li><a class="listlinks" href="#">Web Development</a></li>
-						<li><a class="listlinks" href="#">General Icons</a></li>
-					</ul>
-				</div>
-				<div id="Gallery">
-					<h4 class="head">From The Gallery</h4>
-					<br>
-					<table id="photos">
-						<tr>
-							<td><a href="/img/gall01.jpg" data-lightbox="gallery" title="Image 01"><img src="img/gall01.jpg" alt="img01"></a></td>
-							<td><a href="/img/gall02.jpg" data-lightbox="gallery" title="Image 02"><img src="img/gall02.jpg" alt="img02"></a></td>
-							<td><a href="/img/gall03.jpg" data-lightbox="gallery" title="Image 03"><img src="img/gall03.jpg" alt="img03"></a></td>
-							<td><a href="/img/gall04.jpg" data-lightbox="gallery" title="Image 04"><img src="img/gall04.jpg" alt="img04"></a></td>
-						</tr>
-						<tr>
-							<td><a href="/img/gall05.jpg" data-lightbox="gallery" title="Image 05"><img src="img/gall05.jpg" alt="img05"></a></td>
-							<td><a href="/img/gall06.jpg" data-lightbox="gallery" title="Image 06"><img src="img/gall06.jpg" alt="img06"></a></td>
-							<td><a href="/img/gall07.jpg" data-lightbox="gallery" title="Image 07"><img src="img/gall07.jpg" alt="img07"></a></td>
-							<td><a href="/img/gall08.jpg" data-lightbox="gallery" title="Image 08"><img src="img/gall08.jpg" alt="img08"></a></td>
-						</tr>
-					</table>
-				</div>
-				<div id="twupdates">
-					<h4 class="head">Twitter Updates</h4>
-					<div id="example1"></div>
+				}
+				?>
+			</div>
+			<div id="info">
+				<div class="wrapper">
+					<div id="about">
+						<h4 class="head">About Us</h4>
+						<br>
+						<ul>
+							<li><a class="listlinks" href="#">Our Company</a></li>
+							<li><a class="listlinks" href="#">Our Blog</a></li>
+							<li><a class="listlinks" href="#">Submit A Site</a></li>
+							<li><a class="listlinks" href="#">Contact Us</a></li>
+							<li><a class="listlinks" href="#">Help & Terms</a></li>
+							<li><a class="listlinks" href="#">Read Our FAQ</a></li>
+						</ul>
+					</div>
+					<div id="Categories">
+						<h4 class="head">Categories</h4>
+						<br>
+						<ul>
+							<li><a class="listlinks" href="#">Trends & Technology</a></li>
+							<li><a class="listlinks" href="#">Desigh Companies</a></li>
+							<li><a class="listlinks" href="#">Design Freelancers</a></li>
+							<li><a class="listlinks" href="#">Web Portfolios</a></li>
+							<li><a class="listlinks" href="#">Web Development</a></li>
+							<li><a class="listlinks" href="#">General Icons</a></li>
+						</ul>
+					</div>
+					<div id="Gallery">
+						<h4 class="head">From The Gallery</h4>
+						<br>
+						<table id="photos">
+							<tr>
+								<td><a href="/img/gall01.jpg" data-lightbox="gallery" title="Image 01"><img src="img/gall01.jpg" alt="img01"></a></td>
+								<td><a href="/img/gall02.jpg" data-lightbox="gallery" title="Image 02"><img src="img/gall02.jpg" alt="img02"></a></td>
+								<td><a href="/img/gall03.jpg" data-lightbox="gallery" title="Image 03"><img src="img/gall03.jpg" alt="img03"></a></td>
+								<td><a href="/img/gall04.jpg" data-lightbox="gallery" title="Image 04"><img src="img/gall04.jpg" alt="img04"></a></td>
+							</tr>
+							<tr>
+								<td><a href="/img/gall05.jpg" data-lightbox="gallery" title="Image 05"><img src="img/gall05.jpg" alt="img05"></a></td>
+								<td><a href="/img/gall06.jpg" data-lightbox="gallery" title="Image 06"><img src="img/gall06.jpg" alt="img06"></a></td>
+								<td><a href="/img/gall07.jpg" data-lightbox="gallery" title="Image 07"><img src="img/gall07.jpg" alt="img07"></a></td>
+								<td><a href="/img/gall08.jpg" data-lightbox="gallery" title="Image 08"><img src="img/gall08.jpg" alt="img08"></a></td>
+							</tr>
+						</table>
+					</div>
+					<div id="twupdates">
+						<h4 class="head">Twitter Updates</h4>
+						<div id="example1"></div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<footer>
-			<div class="wrapper">
-				<p id="copyright">© 2010 Copyright iPadMasters Theme. All Rights Reserved.</p>
-				<div id="links">
-					<ul>
-						<li><a href="#">Log In</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Terms and Conditions</a></li>
-						<li><a href="#">Contact Us</a></li>
-						<li><a class="noborder" href="#">Back to Top</a></li>
-					</ul>
+			<footer>
+				<div class="wrapper">
+					<p id="copyright">© 2010 Copyright iPadMasters Theme. All Rights Reserved.</p>
+					<div id="links">
+						<ul>
+							<li><a href="#">Log In</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Terms and Conditions</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a class="noborder" href="#">Back to Top</a></li>
+						</ul>
+					</div>
 				</div>
-			</div>
-		</footer>
-		<script src="js/vendor/jquery-1.10.2.min.js"></script>
-		<script src="js/vendor/lightbox-2.6.min.js"></script>
-		<script src="js/vendor/twitterFetcher_v10_min.js"></script>
-		<script src="js/vendor/jquery.cycle.all.js"></script>
-		<script src="js/main.js"></script>
-	</body>
-	</html>
+			</footer>
+			<script src="js/vendor/jquery-1.10.2.min.js"></script>
+			<script src="js/vendor/lightbox-2.6.min.js"></script>
+			<script src="js/vendor/twitterFetcher_v10_min.js"></script>
+			<script src="js/vendor/jquery.cycle.all.js"></script>
+			<script src="js/main.js"></script>
+		</body>
+		</html>
