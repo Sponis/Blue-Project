@@ -71,31 +71,32 @@
                 <ul id="form-list">
                     <li>
                         <label for="first_name">First Name <span class="redstar">*</span></label>
-                        <input type="text" name="first_name" maxlength="50" placeholder="Your First Name" tabindex="1">
+                        <input id="first_name" type="text" name="first_name" maxlength="50" placeholder="Your First Name" tabindex="1">
                     </li>
                     <li>
                         <label for="last_name">Last Name <span class="redstar">*</span></label>
-                        <input type="text" name="last_name" maxlength="50" placeholder="Your Last Name" tabindex="2">
+                        <input id="last_name" type="text" name="last_name" maxlength="50" placeholder="Your Last Name" tabindex="2">
                     </li>
                     <li>
                         <label for="email">Email Address <span class="redstar">*</span></label>
-                        <input type="text" name="email" maxlength="80" placeholder="Your Email Address" tabindex="3">
+                        <input id="email" type="text" name="email" maxlength="80" placeholder="Your Email Address" tabindex="3">
                     </li>
                     <li>
                         <label for="telephone">Telephone Number <span class="redstar">*</span></label>
-                        <input type="text" name="telephone" maxlength="30" placeholder="Your Telephone" tabindex="4">
+                        <input id="telephone" type="text" name="telephone" maxlength="30" placeholder="Your Telephone" tabindex="4">
                     </li>
                     <li>
                         <label for="DoB">Date of Birth <span class="redstar">*</span></label>
-                        <input type="text" name="DoB" maxlength="30" placeholder="Your Date of Birth" tabindex="5">
+                        <input id="DoB" type="text" name="DoB" maxlength="30" placeholder="Your Date of Birth" tabindex="5">
                     </li>
                     <li>
                         <label for="address">Home Address</label>
-                        <input type="text" name="address" maxlength="50" placeholder="Your Home Address" tabindex="6">
+                        <input id="address" type="text" name="address" maxlength="50" placeholder="Your Home Address" tabindex="6">
                     </li>
                     <li>
                         <label class="nochange" for="country">Country <span class="redstar">*</span></label>
-                        <Select name="country">
+                        <select id="country" name="country">
+                            <option value="">Country</option>
                             <option value="China">CHN</option>
                             <option value="England">ENG</option>
                             <option value="France">FRA</option>
@@ -110,11 +111,11 @@
                     </li>
                     <li>    
                         <label for="comments">Comments</label>
-                        <textarea name="comments" maxlength="1000" cols="25" rows="6" placeholder="add any comments" tabindex="7"></textarea>
+                        <textarea id="comments" name="comments" maxlength="1000" cols="25" rows="6" placeholder="add any comments" tabindex="7"></textarea>
                     </li>
                     <li>
                         <label class="nochange" for="terms">I Accept the Terms and Conditions <span class="redstar">*</span></label>
-                        <input type="checkbox" name="terms" value="terms">
+                        <input id="terms" type="checkbox" name="terms" value="terms">
                     </li>
                 </ul>
                 <input class="submitbutton" type="submit" value="Submit">

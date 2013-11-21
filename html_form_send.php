@@ -148,6 +148,10 @@
 						$fields_errors[] = ['telephone' => 'The Telephone Number you entered does not appear to be valid'];
 						$has_errors = true;
 					}
+					if ($country == "") {
+						$fields_errors[] = ['country'] => 'The Country you entered does not appear to be valid'];
+						$has_errors = true;
+					}
 					}
 
 					if ($has_errors == true) {
@@ -156,9 +160,70 @@
 						echo "These errors appear below.<br /><br />";
 						foreach ($fields_errors as $error)  {
 							$error_msg = implode ($error);
-						echo $error_msg . "<br /><br />";}
-						echo "Please go back and fix these errors.<br /><br />";
-					}
+							echo $error_msg . "<br /><br />";
+						}
+
+?>
+	
+			<div class="wrapper2">
+            <h2 class="formheader">Contact Us!</h2>
+            <form class="contactus" name="ContactUs" method="post" action="html_form_send.php">
+                <ul id="form-list">
+                    <li>
+                        <label for="first_name">First Name <span class="redstar">*</span></label>
+                        <input id="first_name" type="text" name="first_name" value="<?php echo $first_name; ?>" maxlength="50" placeholder="Your First Name" tabindex="1">
+                    </li>
+                    <li>
+                        <label for="last_name">Last Name <span class="redstar">*</span></label>
+                        <input id="last_name" type="text" name="last_name" value="<?php echo $last_name; ?>" maxlength="50" placeholder="Your Last Name" tabindex="2">
+                    </li>
+                    <li>
+                        <label for="email">Email Address <span class="redstar">*</span></label>
+                        <input id="email" type="text" name="email" value="<?php echo $email_from; ?>" maxlength="80" placeholder="Your Email Address" tabindex="3">
+                    </li>
+                    <li>
+                        <label for="telephone">Telephone Number <span class="redstar">*</span></label>
+                        <input id="telephone" type="text" name="telephone" value="<?php echo $telephone; ?>" maxlength="30" placeholder="Your Telephone" tabindex="4">
+                    </li>
+                    <li>
+                        <label for="DoB">Date of Birth <span class="redstar">*</span></label>
+                        <input id="DoB" type="text" name="DoB" value="<?php echo $DoB; ?>" maxlength="30" placeholder="Your Date of Birth" tabindex="5">
+                    </li>
+                    <li>
+                        <label for="address">Home Address</label>
+                        <input id="address" type="text" name="address" value="<?php echo $address; ?>"maxlength="50" placeholder="Your Home Address" tabindex="6">
+                    </li>
+                    <li>
+                        <label class="nochange" for="country">Country <span class="redstar">*</span></label>
+                        <Select id="country" name="country">
+                            <option value="China">CHN</option>
+                            <option value="England">ENG</option>
+                            <option value="France">FRA</option>
+                            <option value="Germany">GER</option>
+                            <option value="Greece">GRE</option>
+                            <option value="Holland">HOL</option>
+                            <option value="Italy">ITA</option>
+                            <option value="Japan">JPN</option>
+                            <option value="USA">USA</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </li>
+                    <li>    
+                        <label for="comments">Comments</label>
+                        <textarea id="comments" name="comments" value="<?php echo $comments; ?>" maxlength="1000" cols="25" rows="6" placeholder="add any comments" tabindex="7"></textarea>
+                    </li>
+                    <li>
+                        <label class="nochange" for="terms">I Accept the Terms and Conditions <span class="redstar">*</span></label>
+                        <input id="terms" type="checkbox" name="terms" value="terms">
+                    </li>
+                </ul>
+                <input class="submitbutton" type="submit" value="Submit">
+            </form>
+        </div>
+<?php
+
+
+				}	
 
 					else {
 
