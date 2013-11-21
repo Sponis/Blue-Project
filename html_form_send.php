@@ -79,26 +79,32 @@
 
 					// validation expected data exists
 				if (!isset($_POST['first_name'])) {
+					$first_name = "";
 					$fields_errors[] = ['first_name' => 'We are sorry, but First Name expected'];
 					$has_errors = true;
 				}
 				if (!isset($_POST['last_name'])) {
+					$last_name = "";
 					$fields_errors[] = ['last_name' => 'We are sorry, but Last Name expected'];
 					$has_errors = true;
 				}
 				if (!isset($_POST['email'])) {
+					$email_from = "";
 					$fields_errors = ['email' => 'We are sorry, but Email Address expected'];
 					$has_errors = true;
 				}
 				if (!isset($_POST['telephone'])) {
+					$telephone = "";
 					$fields_errors[] = ['telephone' => 'We are sorry, but Telephone Number expected'];
 					$has_errors = true;
 				}
 				if (!isset($_POST['DoB'])) {
+					$DoB = "";
 					$fields_errors[] = ['DoB' => 'We are sorry, but Date of Birth expected'];
 					$has_errors = true;
 				}
 				if (!isset($_POST['address'])) {
+					$address = "";
 					$fields_errors[] = ['address' => 'We are sorry, but Home Address expected'];
 					$has_errors = true;
 				}
@@ -107,6 +113,7 @@
 					$has_errors = true;
 				}
 				if (!isset($_POST['comments'])) {
+					$comments = "";
 					$fields_errors[] = ['comments' => 'We are sorry, but Comments expected'];
 					$has_errors = true;
 				}
@@ -163,7 +170,7 @@
 							echo $error_msg . "<br /><br />";
 							}
 						}
-					}
+					
 ?>
 	
 			<div class="wrapper2">
