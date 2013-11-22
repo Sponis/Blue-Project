@@ -23,6 +23,11 @@ jQuery(document).ready(function(){
     //prevent submit form//
     jQuery('.submitbutton').on("click", function(event) {
       event.preventDefault();
+
+      jQuery(".error-missing").remove();
+
+      jQuery(".error-invalid").remove();
+
       var first_name = jQuery("#first_name").val();
 
       var last_name = jQuery("#last_name").val();
@@ -45,17 +50,42 @@ jQuery(document).ready(function(){
   
       if (first_name == "") {
         var has_errors = true;
+        jQuery('<p class="error-missing">First Name is empty!</p>').insertAfter("#first_name");
+      };
+
+      var string_exp = /^[A-Za-z .'-]+$/;
+      if(!string_exp.test(first_name)) {
+        jQuery('<p class="error-invalid">First Name contains invalid characters!</p>').insertAfter('#first_name');
+        var has_errors = true;
       };
 
       if (last_name == "") {
         var has_errors = true;
       };
 
+      if (!string_exp.test(last_name)) {
+        jQuery('<p class="error-invalid">Last Name contains invalid characters!</p>').insertAfter('#last_name');
+        var has_errors = true;
+      };
+
+
       if (email_from == "") {
         var has_errors = true;
       };
 
+      var email_exp = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+      if (!email_exp.test(email_from)) {
+        jQuery('<p class="error-invalid">Enail address contains invalid characters!</p>').insertAfter('#email');
+        var has_errors = true;
+      };
+
       if (telephone == "") {
+        var has_errors = true;
+      };
+
+      var num_exp = /^[\d -]+$/;
+      if (!num_exp.test(telephone)) {
+        jQuery('<p class="error-invalid">Telephone number contains invalid characters!</p>').insertAfter('#telephone');
         var has_errors = true;
       };
 
@@ -71,6 +101,7 @@ jQuery(document).ready(function(){
         var has_errors = true;
       };
       
+
      console.log(has_errors) 
     });
 
