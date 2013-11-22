@@ -20,7 +20,7 @@ jQuery(document).ready(function(){
     };
 
 
-    //prevent submit form//
+    //prevent submit form
     jQuery('.submitbutton').on("click", function(event) {
       event.preventDefault();
 
@@ -61,6 +61,7 @@ jQuery(document).ready(function(){
 
       if (last_name == "") {
         var has_errors = true;
+        jQuery('<p class="error-missing">Last Name is empty!</p>').insertAfter("#last_name");
       };
 
       if (!string_exp.test(last_name)) {
@@ -71,6 +72,7 @@ jQuery(document).ready(function(){
 
       if (email_from == "") {
         var has_errors = true;
+        jQuery('<p class="error-missing">Email address is empty!</p>').insertAfter("#email");
       };
 
       var email_exp = /^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
@@ -81,6 +83,7 @@ jQuery(document).ready(function(){
 
       if (telephone == "") {
         var has_errors = true;
+        jQuery('<p class="error-missing">Telephone number is empty!</p>').insertAfter("#telephone");
       };
 
       var num_exp = /^[\d -]+$/;
@@ -91,18 +94,43 @@ jQuery(document).ready(function(){
 
       if (DoB == "") {
         var has_errors = true;
+        jQuery('<p class="error-missing">Date of Birth is empty!</p>').insertAfter("#DoB");
       };
 
       if (country == "") {
         var has_errors = true;
+        jQuery('<p class="error-missing">Country is empty!</p>').insertAfter("#country");
       };
 
       if (terms == false) {
         var has_errors = true;
+        jQuery('<p class="error-missing">You must agree to Terms and Conditions</p>').insertAfter("#terms");
       };
       
 
      console.log(has_errors) 
+
+     if (has_errors == false) {
+      var postData = $('.contactus').serializeArray();
+      var formURL = $('contactus').attr("action");
+      var formmethod = $('contactus').attr("method");
+    $.ajax(
+    {
+        url : formURL,
+        type: formmethod,
+        data : postData,
+        success:function(data)
+        {
+            jQuery('<p class="successmsg">Your form was succesfully submitted, thank you!</p>').html(".wrapper2");
+        error: function()
+        {
+            jQuery('<p class="server-error">There was an error submitting your form, please try again later</p>').insertAfter('.contactus');
+        }
+    });
+
+      //jQuery('.contactus').submit();
+     };
+
     });
 
     
