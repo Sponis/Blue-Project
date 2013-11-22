@@ -24,24 +24,53 @@ jQuery(document).ready(function(){
     jQuery('.submitbutton').on("click", function(event) {
       event.preventDefault();
       var first_name = jQuery("#first_name").val();
-      console.log(first_name);
+
       var last_name = jQuery("#last_name").val();
-      console.log(last_name);
+
       var email_from = jQuery("#email").val();
-      console.log(email_from);
+  
       var telephone = jQuery("#telephone").val();
-      console.log(telephone);
+  
       var DoB = jQuery("#DoB").val();
-      console.log(DoB);
+  
       var address = jQuery("#address").val();
-      console.log(address);
+  
       var country = jQuery("#country").val();
-      console.log(country);
+        
       var comments = jQuery("#comments").val();
-      console.log(comments);
-      var terms = jQuery("#terms").attr('checked');
-      console.log(terms);
-      console.log('the form did not submitted');
+  
+      var terms = jQuery("#terms").is(':checked');
+
+      var has_errors = false;
+  
+      if (first_name == "") {
+        var has_errors = true;
+      };
+
+      if (last_name == "") {
+        var has_errors = true;
+      };
+
+      if (email_from == "") {
+        var has_errors = true;
+      };
+
+      if (telephone == "") {
+        var has_errors = true;
+      };
+
+      if (DoB == "") {
+        var has_errors = true;
+      };
+
+      if (country == "") {
+        var has_errors = true;
+      };
+
+      if (terms == false) {
+        var has_errors = true;
+      };
+  
     });
 
     
