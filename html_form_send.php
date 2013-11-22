@@ -161,8 +161,13 @@
 					}
 					}
 
-					if ($has_errors == true) {
-						if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+					if ($has_errors == true) {				
+?>
+	
+			<div class="wrapper2">
+				<div class="error-messages">
+					<?php
+					if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 						echo "We are very sorry, but there were error(s) found with the form you submitted. ";
 						echo "These errors appear below.<br /><br />";
 						foreach ($fields_errors as $error)  {
@@ -170,10 +175,8 @@
 							echo $error_msg . "<br /><br />";
 							}
 						}
-					
-?>
-	
-			<div class="wrapper2">
+						?>
+				</div>
             <h2 class="formheader">Contact Us!</h2>
             <form class="contactus" name="ContactUs" method="post" action="html_form_send.php">
                 <ul id="form-list">
