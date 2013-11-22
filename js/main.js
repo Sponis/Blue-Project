@@ -70,7 +70,8 @@ jQuery(document).ready(function(){
       if (terms == false) {
         var has_errors = true;
       };
-  
+      
+     console.log(has_errors) 
     });
 
     
