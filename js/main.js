@@ -108,20 +108,22 @@ jQuery(document).ready(function(){
       };
       
 
-     console.log(has_errors) 
-
      if (has_errors == false) {
       var postData = $('.contactus').serializeArray();
+      postData.push({ name: "isAjax", value: "true" });
       var formURL = $('contactus').attr("action");
       var formmethod = $('contactus').attr("method");
     $.ajax(
     {
         url : formURL,
-        type: formmethod,
+        type: "POST",
         data : postData,
+        dataType: 'json',
         success:function(data)
-        {
-            jQuery('<p class="successmsg">Your form was succesfully submitted, thank you!</p>').html(".wrapper2");
+          {
+            console.log(data.data);
+            jQuery(".wrapper2").html('<h3 class="successmsg">Your form was succesfully submitted, thank you!</h3><p>'+ data.data + '</p>');
+          },
         error: function()
         {
             jQuery('<p class="server-error">There was an error submitting your form, please try again later</p>').insertAfter('.contactus');
