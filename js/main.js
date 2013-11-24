@@ -28,47 +28,26 @@ jQuery(document).ready(function(){
 
       jQuery(".error-invalid").remove();
 
-      var first_name = jQuery("#first_name").val();
-
-      var last_name = jQuery("#last_name").val();
-
+      var your_name = jQuery("#your_name").val();
+      
       var email_from = jQuery("#email").val();
   
-      var telephone = jQuery("#telephone").val();
-  
-      var DoB = jQuery("#DoB").val();
-  
-      var address = jQuery("#address").val();
-  
-      var country = jQuery("#country").val();
-        
-      var comments = jQuery("#comments").val();
-  
-      var terms = jQuery("#terms").is(':checked');
+      var subject = jQuery("#subject").val();
+   
+      var message = jQuery("#message").val();
 
       var has_errors = false;
   
-      if (first_name == "") {
+      if (your_name == "") {
         var has_errors = true;
-        jQuery('<p class="error-missing">First Name is empty!</p>').insertAfter("#first_name");
+        jQuery('<p class="error-missing">Your Name is empty!</p>').insertAfter("#first_name");
       };
 
       var string_exp = /^[A-Za-z .'-]+$/;
-      if(!string_exp.test(first_name)) {
-        jQuery('<p class="error-invalid">First Name contains invalid characters!</p>').insertAfter('#first_name');
+      if(!string_exp.test(your_name)) {
+        jQuery('<p class="error-invalid">Your Name contains invalid characters!</p>').insertAfter('#your_name');
         var has_errors = true;
       };
-
-      if (last_name == "") {
-        var has_errors = true;
-        jQuery('<p class="error-missing">Last Name is empty!</p>').insertAfter("#last_name");
-      };
-
-      if (!string_exp.test(last_name)) {
-        jQuery('<p class="error-invalid">Last Name contains invalid characters!</p>').insertAfter('#last_name');
-        var has_errors = true;
-      };
-
 
       if (email_from == "") {
         var has_errors = true;
@@ -81,32 +60,15 @@ jQuery(document).ready(function(){
         var has_errors = true;
       };
 
-      if (telephone == "") {
+      if (subject == "") {
         var has_errors = true;
-        jQuery('<p class="error-missing">Telephone number is empty!</p>').insertAfter("#telephone");
+        jQuery('<p class="error-missing">Subject is empty!</p>').insertAfter("#subject");
       };
 
-      var num_exp = /^[\d -]+$/;
-      if (!num_exp.test(telephone)) {
-        jQuery('<p class="error-invalid">Telephone number contains invalid characters!</p>').insertAfter('#telephone');
+      if (message == "") {
         var has_errors = true;
+        jQuery('<p class="error-missing">Country is empty!</p>').insertAfter("#message");
       };
-
-      if (DoB == "") {
-        var has_errors = true;
-        jQuery('<p class="error-missing">Date of Birth is empty!</p>').insertAfter("#DoB");
-      };
-
-      if (country == "") {
-        var has_errors = true;
-        jQuery('<p class="error-missing">Country is empty!</p>').insertAfter("#country");
-      };
-
-      if (terms == false) {
-        var has_errors = true;
-        jQuery('<p class="error-missing">You must agree to Terms and Conditions</p>').insertAfter("#terms");
-      };
-      
 
      if (has_errors == false) {
       var postData = $('.contactus').serializeArray();
