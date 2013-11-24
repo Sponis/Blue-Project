@@ -692,11 +692,278 @@ footer a:hover {
     display: inline-block;
     line-height: 60px;
 }
-
-
-
 /*end of footer*/
+
 /*contactform*/
+#contactpage {
+    width: 100%;
+    height: 780px;
+    padding: 20px 0px;
+    background: url('/img/slc_content.png');
+}
+
+.wrapper2 {
+    width: 910px;
+    height: 740px;
+    margin: 0px auto;
+    padding: 20px;
+    background: url('/img/contactpage.jpg');
+}
+
+.contactform {
+    display: inline-block;
+    width: 67%;
+    height: 700px;
+    background-color: #fff;
+    padding: 20px 0px 20px 20px;
+    float: left;
+    position: relative;
+}
+
+.formheader {
+    background: url(/img/dark_mob.png) no-repeat;
+    padding-left: 30px;
+    font-family: Arial;
+    font-size: 22px;
+    font-weight: bold;
+    color: #4d5467;
+    border-bottom: 1px dotted #000;
+    margin: 0;
+}
+
+.contact-text {
+    margin: 0;
+    padding: 20px 0px;
+    font-family: Verdana;
+    font-size: 12px;
+    color: #4d5467;
+}
+
+.contactus {
+    width: 600px;
+    height: 550px;
+}
+
+#form-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#form-list label, input[type="text"], textarea {
+    display: block;
+    border: 0;
+}
+
+#form-list input[type="text"] {
+    width: 270px;
+    height: 40px;
+    background-color: #eef0f5;
+}
+
+#form-list textarea {
+    width: 600px;
+    height: 270px;
+    background-color: #eef0f5;   
+}
+
+#form-list label {
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    color: #4d5467;
+    margin-bottom: 2px;
+}
+
+.req-fields {
+    display: inline-block;
+    font-family: Verdana;
+    font-size: 12px;
+    color: #4d5467;
+    width: 50%;
+}
+
+#submitbutton {
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    width: 110px;
+    height: 40px;
+    background-color: #11719f;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+/*end of contactform*/
+
+/*contactpage right column*/
+.contactpage-right-column {
+    display: inline-block;
+    width: 30%;
+    height: 740px;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.right-column-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.get-in-touch {
+    width: 270px;
+    height: 290px;
+    background-color: #fff;
+}
+
+.rcol-listA {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rcol-listA li {
+    margin-top: 10px;
+}
+
+.rcol-boxA {
+    padding: 20px;
+    height: 200px;
+    background-color: #eef0f5;
+}
+
+.rcol-text {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+    font-size: 12px;
+    color: #444955;
+}
+
+.boxhead2 {
+    width: 270px;
+    height: 50px;
+    background-color: #9097a9;
+}
+
+.InTouchHead {
+    padding-left: 50px;
+    margin: 0;
+    line-height: 50px;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: url(/img/white_mob.png) no-repeat;
+}
+
+.subhead2 {
+    font-family: Verdana;
+    font-size: 12px;
+    line-height: 12px;
+    color: #444955;
+    width: 250px;
+}
+
+.site-navi {
+    height: 280px;
+    width: 270px;
+    background-color: #fff;
+}
+
+.site-navi-head {
+    padding-left: 50px;
+    margin: 0;
+    line-height: 50px;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: url(/img/white_list.png) no-repeat;
+}
+
+.rcol-boxB {
+    height: 230px;
+    background-color: #eef0f5;
+}
+
+.site-navi-list {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.site-navi-list li {
+    display: block;
+    width: 245px;
+    height: 40px;
+    background-color: #dce0e9;
+    border: 1px solid #000;
+    margin-bottom: 1px;
+
+}
+
+.site-navi-list li:hover {
+    background-color: #d0d4de;
+}
+
+.navi2 {
+    text-decoration: none;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 40px;
+    padding: 12px 100px 12px 12px;
+    color: #444955;
+}
+
+.net-connect-head {
+    padding-left: 50px;
+    margin: 0;
+    line-height: 50px;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: url(/img/white_bubble.png) no-repeat;
+
+}
+.rcol-boxC {
+    height: 120px;
+    width: 270px;
+    background-color: #eef0f5;
+}
+
+.net-connect-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.net-connect-list li {
+    display: inline-block;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.net-connect-list a {
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+
+
+
+/*.arrow {
+    background: url(/img/arrow.png) no-repeat;
+}*/
+
+
+/* oldcontactform
 #contactform {
     width: 100%;
     background: url('/img/slc_content.png');
@@ -779,7 +1046,7 @@ footer a:hover {
 
 #form-list label {
     font-size: .8125em; /* 13/16 */
-    position: absolute;
+ /*   position: absolute;
     top: 0.50em;
     left: 1em;
     opacity: 1;
@@ -797,4 +1064,4 @@ footer a:hover {
  
 
 
-/*end of contactform*/
+/*end of old contactform*/
