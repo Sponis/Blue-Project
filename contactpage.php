@@ -9,25 +9,25 @@ $email_subject = "Contact Us Form Submission";
 $fields_errors = array();
 $has_errors = false;
 
-                    // validation expected data exists
+// validation expected data exists
 if (!isset($_POST['your_name'])) {
     $your_name = "";
-    $fields_errors[] = ['your_name' => 'We are sorry, but Your Name is expected'];
+    $fields_errors['your_name'] = 'We are sorry, but Your Name is expected';
     $has_errors = true;
 }
 if (!isset($_POST['email'])) {
     $email_from = "";
-    $fields_errors = ['email' => 'We are sorry, but Email Address is expected'];
+    $fields_errors['email'] = 'We are sorry, but Email Address is expected';
     $has_errors = true;
 }
 if (!isset($_POST['subject'])) {
     $subject = "";
-    $fields_errors[] = ['subject' => 'We are sorry, but Subject is expected'];
+    $fields_errors['subject'] = 'We are sorry, but Subject is expected';
     $has_errors = true;
 }
 if (!isset($_POST['message'])) {
     $message = "";
-    $fields_errors[] = ['comments' => 'We are sorry, but Message expected'];
+    $fields_errors['comments'] = 'We are sorry, but Message expected';
     $has_errors = true;
 }
 
@@ -143,22 +143,6 @@ if ($has_errors == false) {
                     <!--- END OF HEADER-->
                     <div id="contactpage">
                         <div class="wrapper2">
-                            <?php
-                            if ($has_errors == true) {              
-                                ?>
-
-                                <div class="wrapper2">
-                                    <div class="error-messages">
-                                        <?php
-                                        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                                            echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-                                            echo "These errors appear below.<br /><br />";
-                                            foreach ($fields_errors as $error)  {
-                                                $error_msg = implode ($error);
-                                                echo $error_msg . "<br /><br />";
-                                            }
-                                        }
-                                        ?>
                                         <div class="contactform">
                                             <h3 class="formheader">Contact Us</h3>
                                             <p class="contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -167,6 +151,25 @@ if ($has_errors == false) {
                                                 Ut consectetur lorem ipsum, at semper leo lobortis non. 
                                                 Vestibulum dictum augue et risus tempor, vel ullamcorper risus luctus.
                                                 Curabitur vitae massa nec lorem sodales malesuada.</p>
+												<p class="error-messages">									
+												<?php
+												if ($has_errors == true) {          
+															if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+																echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+																echo "These errors appear below.<br /><br />";
+																foreach ($fields_errors as $error)  {
+																	$error_msg = implode ($error);
+																	echo $error_msg . "<br /><br />";
+																}
+															}
+														}
+														else {
+															echo "Send to: $email_to \n";
+															echo "Subject: $email_subject \n";
+															echo $email_message;
+														}
+														?>
+												</p>
                                                 <form class="contactus" name="ContactUs" method="POST" action="contactpage.php">
                                                     <ul id="form-list">
                                                         <li>
@@ -177,6 +180,13 @@ if ($has_errors == false) {
                                                             <label for="email">* Email Address</label>
                                                             <input id="email" type="text" name="email" value="<?php echo $email_from; ?>" maxlength="80" tabindex="2">
                                                         </li>
+														</ul>
+														<div class="map-box">
+															<span class="map-text">Our Location</span>
+															<div id="ggl-map">
+															</div>
+														</div>
+														<ul id="form-list">
                                                         <li>
                                                             <label for="subject">* Subject</label>
                                                             <input id="subject" type="text" name="subject" value="<?php echo $subject; ?>" maxlength="80" tabindex="3">
@@ -189,19 +199,6 @@ if ($has_errors == false) {
                                                     <span class="req-fields">* These are required fields</span>
                                                     <input id="submitbutton" type="submit" value="Send Message">
                                                 </form>
-                                                <?php
-                                                }
-                                                else {
-                                                    echo "Send to: $email_to \n";
-                                                    echo "Subject: $email_subject \n";
-                                                    echo $email_message;
-                                                }
-                                                ?>
-                                                <div class="map-box">
-                                                    <span class="map-text">Our Location</span>
-                                                    <div id="ggl-map">
-                                                    </div>
-                                                </div>
                                             </div>
                                             <div class="contactpage-right-column">
                                                 <ul class="right-column-list">
