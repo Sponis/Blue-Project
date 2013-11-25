@@ -143,6 +143,7 @@ if ($has_errors == false) {
                     <!--- END OF HEADER-->
                     <div id="contactpage">
                         <div class="wrapper2">
+							<div class="whiteBg">
                             <div class="contactform">
                                 <h3 class="formheader">Contact Us</h3>
                                 <p class="contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -165,11 +166,13 @@ if ($has_errors == false) {
                                             }
                                         }
                                         else {
-                                            echo "Send to: $email_to \n";
-                                            echo "Subject: $email_subject \n";
-                                            echo $email_message;
+                                            echo "Send to: $email_to <br />";
+                                            echo "Subject: $email_subject <br />";
+                                            echo $email_message . '<br />';
+                                            echo "Your form was submitted. ";
                                         }
                                         ?>
+										</div>
                                         <form class="contactus" name="ContactUs" method="POST" action="contactpage.php">
                                             <ul class="form-list">
                                                 <li>
@@ -200,7 +203,6 @@ if ($has_errors == false) {
                                             <input id="submitbutton" type="submit" value="Send Message">
                                         </form>
                                     </div>
-                                </div>
                                 <div class="contactpage-right-column">
                                     <ul class="right-column-list">
                                         <li class="get-in-touch">
@@ -286,7 +288,9 @@ if ($has_errors == false) {
                                         </li>
                                     </ul>
                                 </div>
+                                </div>
                             </div>
+                        </div>
                         </div>
                         <div id="info">
                             <div class="wrapper">
