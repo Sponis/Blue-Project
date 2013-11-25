@@ -12,22 +12,22 @@ $has_errors = false;
                     // validation expected data exists
 if (!isset($_POST['your_name'])) {
     $your_name = "";
-    $fields_errors[] = ['your_name' => 'We are sorry, but Your Name is expected'];
+    $fields_errors['your_name'] = 'We are sorry, but Your Name is expected';
     $has_errors = true;
 }
 if (!isset($_POST['email'])) {
     $email_from = "";
-    $fields_errors = ['email' => 'We are sorry, but Email Address is expected'];
+    $fields_errors['email'] = 'We are sorry, but Email Address is expected';
     $has_errors = true;
 }
 if (!isset($_POST['subject'])) {
     $subject = "";
-    $fields_errors[] = ['subject' => 'We are sorry, but Subject is expected'];
+    $fields_errors['subject'] = 'We are sorry, but Subject is expected';
     $has_errors = true;
 }
 if (!isset($_POST['message'])) {
     $message = "";
-    $fields_errors[] = ['comments' => 'We are sorry, but Message expected'];
+    $fields_errors['comments'] = 'We are sorry, but Message expected';
     $has_errors = true;
 }
 
@@ -41,12 +41,12 @@ if ($has_errors == false) {
 
                     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
                     if (!preg_match($email_exp, $email_from)) {
-                        $fields_errors[] = ['email' => 'The Email Address you entered does not appear to be valid.'];
+                        $fields_errors['email'] = 'The Email Address you entered does not appear to be valid.';
                         $has_errors = true;
                     }
                     $string_exp = "/^[A-Za-z .'-]+$/";
                     if (!preg_match($string_exp, $your_name)) {
-                        $fields_errors[] = ['your_name' => 'The Name you entered does not appear to be valid.'];
+                        $fields_errors['your_name'] = 'The Name you entered does not appear to be valid.';
                         $has_errors = true;
                     }
                     
