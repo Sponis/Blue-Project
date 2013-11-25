@@ -8,6 +8,7 @@
 header {
     width:100%;
     height: 150px;
+    overflow: hidden;
 }
  
 #tophead {
@@ -697,27 +698,26 @@ footer a:hover {
 /*contactform*/
 #contactpage {
     width: 100%;
-    height: 780px;
+    overflow: hidden;
     padding: 20px 0px;
-    background: url('/img/slc_content.png');
+    background-color: #333949;
 }
 
 .wrapper2 {
     width: 910px;
-    height: 740px;
+    overflow: hidden;
     margin: 0px auto;
     padding: 20px;
-    background: url('/img/contactpage.jpg');
+    background-color: #232732;
 }
 
 .contactform {
     display: inline-block;
-    width: 67%;
-    height: 700px;
+    width: 620px;
     background-color: #fff;
-    padding: 20px 0px 20px 20px;
+    padding: 20px;
     float: left;
-    position: relative;
+    min-height: 710px;
 }
 
 .formheader {
@@ -744,30 +744,47 @@ footer a:hover {
     height: 550px;
 }
 
-#form-list {
+.form-list {
+    display: inline-block;
+    float: left;
+    width: 50%;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-#form-list label, input[type="text"], textarea {
+
+.form-list2 {
+    display: block;
+    float: left;
+    width: 1000%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.form-list label, input[type="text"], textarea {
     display: block;
     border: 0;
 }
 
-#form-list input[type="text"] {
+.form-list2 label, input[type="text"], textarea {
+    display: block;
+    border: 0;
+}
+
+.form-list input[type="text"] {
     width: 270px;
     height: 40px;
     background-color: #eef0f5;
 }
 
-#form-list textarea {
+.form-list2 textarea {
     width: 600px;
     height: 270px;
     background-color: #eef0f5;   
 }
 
-#form-list label {
+.form-list label {
     font-family: Verdana;
     font-size: 12px;
     font-weight: bold;
@@ -784,6 +801,7 @@ footer a:hover {
 }
 
 #submitbutton {
+    border: none;
     display: inline-block;
     float: right;
     margin-top: 10px;
@@ -800,12 +818,12 @@ footer a:hover {
 /*contactpage right column*/
 .contactpage-right-column {
     display: inline-block;
-    width: 30%;
-    height: 740px;
-    background-color: #000;
+    width: 250px;
+    min-height: 750px;
     margin: 0;
     padding: 0;
     float: right;
+    background-color: #eef0f5;
 }
 
 .right-column-list {
@@ -815,8 +833,7 @@ footer a:hover {
 }
 
 .get-in-touch {
-    width: 270px;
-    height: 290px;
+    width: 100%;
     background-color: #fff;
 }
 
@@ -832,8 +849,6 @@ footer a:hover {
 
 .rcol-boxA {
     padding: 20px;
-    height: 200px;
-    background-color: #eef0f5;
 }
 
 .rcol-text {
@@ -845,8 +860,7 @@ footer a:hover {
 }
 
 .boxhead2 {
-    width: 270px;
-    height: 50px;
+    width: 100%;
     background-color: #9097a9;
 }
 
@@ -866,12 +880,10 @@ footer a:hover {
     font-size: 12px;
     line-height: 12px;
     color: #444955;
-    width: 250px;
 }
 
 .site-navi {
-    height: 280px;
-    width: 270px;
+    width: 100%;
     background-color: #fff;
 }
 
@@ -887,7 +899,6 @@ footer a:hover {
 }
 
 .rcol-boxB {
-    height: 230px;
     background-color: #eef0f5;
 }
 
@@ -899,8 +910,8 @@ footer a:hover {
 
 .site-navi-list li {
     display: block;
-    width: 245px;
-    height: 40px;
+    width: 95%;
+    margin: 0 auto;
     background-color: #dce0e9;
     border: 1px solid #000;
     margin-bottom: 1px;
@@ -912,14 +923,23 @@ footer a:hover {
 }
 
 .navi2 {
+    display: block;
+    width: 100%;
     text-decoration: none;
     font-family: Verdana;
     font-size: 14px;
     font-weight: bold;
     line-height: 40px;
-    padding: 12px 100px 12px 12px;
     color: #444955;
+    text-indent: 10px;
+    background: url(/img/arrow.png) 99% 50% no-repeat;
 }
+
+.navi2:hover {
+    color:#000;
+    background: url(/img/black_arrow.png) 99% 50% no-repeat;
+}
+
 
 .net-connect-head {
     padding-left: 50px;
@@ -933,20 +953,19 @@ footer a:hover {
 
 }
 .rcol-boxC {
-    height: 120px;
-    width: 270px;
+    width: 100%;
     background-color: #eef0f5;
 }
 
 .net-connect-list {
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
 .net-connect-list li {
     display: inline-block;
-    padding-left: 10px;
+    padding-left: 7px;
     padding-top: 10px;
 }
 
@@ -957,11 +976,9 @@ footer a:hover {
 }
 
 .map-box {
-    position: absolute;
-    left: 310px;
-    top: 165px;
-    z-index: 99;
-    width: 305px;
+    display: inline-block;
+    float: right;
+    width: 50%;
     height: 185px;
 }
 

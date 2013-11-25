@@ -21,7 +21,7 @@ jQuery(document).ready(function(){
 
 
     //prevent submit form
-    jQuery('.submitbutton').on("click", function(event) {
+    jQuery('#submitbutton').on("click", function(event) {
       event.preventDefault();
 
       jQuery(".error-missing").remove();
