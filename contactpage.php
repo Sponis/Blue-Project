@@ -133,7 +133,7 @@ if ($has_errors == false) {
                                         <li class="nav01"><a class="navi" title="Home" href="/index.html">Home</a></li>
                                         <li class="nav02"><a class="navi" title="About" href="#">About</a></li>
                                         <li class="nav03"><a class="navi" title="Portfolio" href="#">Portfolio</a></li>
-                                        <li class="nav04"><a class="navi" title="Blog" href="#">Blog</a></li>
+                                        <li class="nav04"><a class="navi" title="Blog" href="OurBlogs.html">Blog</a></li>
                                         <li class="nav05"><a class="navi active" title="Contact" href="/contactpage.php">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -144,7 +144,7 @@ if ($has_errors == false) {
                     <div id="contactpage">
                         <div class="wrapper2">
 							<div class="whiteBg">
-                            <div class="contactform">
+                            <div class="main-content">
                                 <h3 class="formheader">Contact Us</h3>
                                 <p class="contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                     Nullam at auctor nulla. Vivamus ultrices quam vitae quam ultrices, sed mollis massa malesuada.
@@ -203,7 +203,7 @@ if ($has_errors == false) {
                                             <input id="submitbutton" type="submit" value="Send Message">
                                         </form>
                                     </div>
-                                <div class="contactpage-right-column">
+                                <div class="right-column">
                                     <ul class="right-column-list">
                                         <li class="get-in-touch">
                                             <div class="InTouchBox">
